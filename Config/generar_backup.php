@@ -1,7 +1,6 @@
 <?php
 // Incluir el archivo de configuración
 include 'config.php';
-
 // Obtener los datos de configuración desde las constantes definidas en config.php
 $host = DB_HOST;
 $usuario = DB_USER;
