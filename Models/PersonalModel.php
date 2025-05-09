@@ -335,7 +335,7 @@ class PersonalModel extends Mysql
         string $evaluacion_competencia,
         string $fecha_evaluacion_competencia,
         ?string $archivo_evalu_competencia,
-        string $formulario_vacaciones, 
+        string $formulario_vacaciones,
         ?int $salario_base,
         ?int $bonificacion,
         ?string $kpi1,
@@ -481,6 +481,7 @@ class PersonalModel extends Mysql
             segundo_apellido, 
             CONCAT(primer_apellido, ' ', segundo_apellido) as apellidos,
             CONCAT(nombres, ' ', primer_apellido, ' ', segundo_apellido) AS nombre_completo,
+            correo_empresarial,
             nombres, 
             identificacion, 
             expedientes, 
@@ -498,6 +499,42 @@ class PersonalModel extends Mysql
         $request = $this->select($sql, array($id_empleado));
         return $request;
     }
+
+    public function infoPersonal($identificacion)
+    {
+        $sql = "SELECT 
+        identificacion, 
+        genero, 
+        estado_civil, 
+        Pais, 
+        departamento, 
+        municipio, 
+        fecha_nacimiento, 
+        mes_cumpleaños, 
+        edad,
+        tipo_identificacion, 
+        pasaporte, 
+        lugar_nacimiento, 
+        no_seguro_social, 
+        info_academica, 
+        no_identificacion_tributaria, 
+        estudios, nivel_educativo, 
+        vig_licencia_conducir, 
+        numero_cel_corporativo, 
+        numero_cel_personal, 
+        numero_cel_emergencia, 
+        nombre_contacto_emergencia, 
+        parentesco_contacto_emergencia, 
+        direccion_domicilio, 
+        correo_electronico_personal, 
+        cant_hijos, 
+        tipo_sangre 
+        FROM info_empleado
+        WHERE identificacion = ?";
+        $request = $this->select($sql, array($identificacion));
+        return $request;
+    }
+
 
     public function registroAvance(string $no_empleado, string $empleado, string $modulo, string $accion, string $fecha, string $ip, string $hostname)
     {

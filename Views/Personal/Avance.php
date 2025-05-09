@@ -6,24 +6,59 @@
 <div class="main p-3">
     <div class="container-fluid">
         <h1 class="mt-4">Información del Empleado</h1>
-        <div class="card mb-4">
+        <div class="card mb-4 shadow-sm">
             <div class="card-header info-section text-white">
-                <i class="fas fa-user"></i> Info Basica del Empleado
+                <i class="fas fa-user me-2"></i> Información Básica del Empleado
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p><strong>Nombres:</strong> <?= $data['personal']['nombres']; ?></p>
-                        <p><strong>Apellidos:</strong> <?= $data['personal']['apellidos']; ?></p>
-                        <p><strong>Fecha Ingreso:</strong> <?= $data['personal']['fecha_ingreso']; ?></p>
+                    <div class="col-md-6 mb-3">
+                        <dl class="row">
+                            <dt class="col-sm-5">Nombres:</dt>
+                            <dd class="col-sm-7"><?= $data['personal']['nombres'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Apellidos:</dt>
+                            <dd class="col-sm-7"><?= $data['personal']['apellidos'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Fecha de Ingreso:</dt>
+                            <dd class="col-sm-7"><?= $data['personal']['fecha_ingreso'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Fecha de Nacimiento:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['fecha_nacimiento'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Mes Cumpleaños:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['mes_cumpleaños'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Edad:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['edad'  ] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Sexo:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['genero'] ?? '<strong>No declarado</strong>'; ?></dd>
+                        </dl>
                     </div>
-                    <div class="col-md-6">
-                        <p><strong>Identificacion:</strong> <?= $data['personal']['identificacion']; ?></p>
+
+                    <div class="col-md-6 mb-3">
+                        <dl class="row">
+                            <dt class="col-sm-5">Identificación:</dt>
+                            <dd class="col-sm-7"><?= $data['personal']['identificacion'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            
+                            <dt class="col-sm-5">Estado Civil:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['estado_civil'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Correo:</dt>
+                            <dd class="col-sm-7"><?= $data['personal']['correo_empresarial'] ?? '<strong>No declarado</strong>'; ?></dd>
+
+                            <dt class="col-sm-5">Teléfono:</dt>
+                            <dd class="col-sm-7"><?= $data['info']['numero_cel_corporativo'] ?? '<strong>No declarado</strong>'; ?></dd>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p><strong>Codigo del Empleado:</strong> <?= $data['personal']['codigo_empleado']; ?></p>
+                        <dl class="row">
+                            <dt class="col-sm-2.5">Código del Empleado:</dt>
+                            <dd class="col-sm-9"><?= $data['personal']['codigo_empleado'] ?? '<strong>No declarado</strong>'; ?></dd>
+                        </dl>
                     </div>
                 </div>
             </div>
@@ -35,7 +70,8 @@
                     <div class="card-body">Informacion Personal del Empleado</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <?php if (!empty($_SESSION['permisos'][2]['leer'])) { ?>
-                            <button class="btn btn-primary" onclick="window.location.href='<?= base_url(); ?>/Info/Mostrar/<?= $data['personal']['identificacion']; ?>'">
+                            <button class="btn btn-primary"
+                                onclick="window.location.href='<?= base_url(); ?>/Info/Mostrar/<?= $data['personal']['identificacion']; ?>'">
                                 Ver Información
                             </button>
                         <?php } else { ?>
@@ -54,7 +90,8 @@
                     <div class="card-body">Uniformes del Empleado</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <?php if (!empty($_SESSION['permisos'][4]['leer'])) { ?>
-                            <button class="btn text-white btn-succes" onclick="window.location.href='<?= base_url(); ?>/Uniformes/Mostrar/<?= $data['personal']['id_empleado']; ?>'">
+                            <button class="btn text-white btn-succes"
+                                onclick="window.location.href='<?= base_url(); ?>/Uniformes/Mostrar/<?= $data['personal']['id_empleado']; ?>'">
                                 Ver Uniformes
                             </button>
                         <?php } else { ?>
@@ -73,7 +110,8 @@
                     <div class="card-footer d-flex align-items-center justify-content-between">
 
                         <?php if (!empty($_SESSION['permisos'][5]['leer'])) { ?>
-                            <button class="btn text-white btn-danger" onclick="window.location.href='<?= base_url(); ?>/Expedientes/Mostrar/<?= $data['personal']['id_empleado']; ?>'">
+                            <button class="btn text-white btn-danger"
+                                onclick="window.location.href='<?= base_url(); ?>/Expedientes/Mostrar/<?= $data['personal']['id_empleado']; ?>'">
                                 Ver Expedientes
                             </button>
                         <?php } else { ?>
@@ -92,8 +130,9 @@
                     <div class="card-footer d-flex align-items-center justify-content-between">
 
                         <?php if (!empty($_SESSION['permisos'][6]['leer'])) { ?>
-                            <button class="btn text-black btn-warning" onclick="window.location.href='<?= base_url(); ?>/Info/Academica/<?= $data['personal']['identificacion']; ?>'">
-                            Informacion Academica
+                            <button class="btn text-black btn-warning"
+                                onclick="window.location.href='<?= base_url(); ?>/Info/Academica/<?= $data['personal']['identificacion']; ?>'">
+                                Informacion Academica
                             </button>
                         <?php } else { ?>
                             <button type="button" class="btn text-black btn-warning" data-bs-toggle="modal"
@@ -123,7 +162,8 @@
                     <i class="fas fa-exclamation-circle"></i> <!-- Ícono de advertencia -->
                     <span>Acceso Denegado</span>
                 </h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-center"> <!-- Padding vertical y centrado -->
                 <div class="mb-3"> <!-- Margen inferior -->

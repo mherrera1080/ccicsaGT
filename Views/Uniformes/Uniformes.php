@@ -12,13 +12,17 @@
                 <h4>Lista de Uniformes del Usuario <strong><?= $data['uniformes']['nombre_completo']; ?></strong></h4>
 
                 <?php if (!empty($_SESSION['permisos'][4]['crear'])) { ?>
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-                    data-bs-target="#addUniformeModal">
-                    Añadir Uniformes
-                </button>
+                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                        data-bs-target="#addUniformeModal">
+                        Añadir Uniformes
+                    </button>
                 <?php } ?>
 
             </div>
+            <button class="btn btn-warning text-black"
+                onclick="window.location.href='<?= base_url(); ?>/Personal/Avance/<?= $data['uniformes']['id_empleado']; ?>'">
+                <i class="fas fa-arrow-left me-1"></i> Regresar
+            </button>
 
             <div style="height: 25px;"></div>
 
@@ -70,7 +74,8 @@
                     <i class="fas fa-exclamation-circle"></i> <!-- Ícono de advertencia -->
                     <span>Acceso Denegado</span>
                 </h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-center"> <!-- Padding vertical y centrado -->
                 <div class="mb-3"> <!-- Margen inferior -->
@@ -119,8 +124,8 @@
                 <div class="modal-footer">
                     <input type="submit" name="insertar" value="Insertar Fila" class="btn btn-info">
                     <button type="submit" id="upUniformes" class="btn btn-primary">
-                    Guardar
-                    <span id="spinerUniformes" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                        Guardar
+                        <span id="spinerUniformes" class="spinner-border spinner-border-sm d-none" role="status"></span>
                     </button>
                 </div>
             </form>

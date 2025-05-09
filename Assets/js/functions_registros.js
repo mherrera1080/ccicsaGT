@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "colvis",
     ],
     bDestroy: true,
-    iDisplayLength: 10,
+    iDisplayLength: 15, // <--- aquí defines las opciones
     order: [[0, "desc"]],
   });
 

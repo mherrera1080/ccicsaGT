@@ -9,13 +9,17 @@
                 <h4>Listado de Expedientes del Empleado || <strong> <?= $data['expedientes']['nombres']; ?> </strong>
                 </h4>
             </div>
+            <button class="btn btn-warning text-black"
+                onclick="window.location.href='<?= base_url(); ?>/Personal/Avance/<?= $data['expedientes']['id_empleado']; ?>'">
+                <i class="fas fa-arrow-left me-1"></i> Regresar
+            </button>
             <div style="height: 25px;"></div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
                             <h4>
-                                
+
                             </h4>
                         </div>
                         <div class="card-body">
@@ -56,7 +60,8 @@
                     <i class="fas fa-exclamation-circle"></i> <!-- Ícono de advertencia -->
                     <span>Acceso Denegado</span>
                 </h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-center"> <!-- Padding vertical y centrado -->
                 <div class="mb-3"> <!-- Margen inferior -->

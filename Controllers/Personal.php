@@ -70,6 +70,10 @@ class Personal extends Controllers
 	{
 		$personal = $this->model->Avance($id_empleado);
 
+		$identificacion = $personal["identificacion"];
+		$info = $this->model->infoPersonal($identificacion);
+
+
 		$nombre = $personal["nombre_completo"];
 
 		if (!empty($nombre)) {
@@ -89,7 +93,8 @@ class Personal extends Controllers
 			'page_title' => 'Editar Usuario',
 			'page_name' => 'usuario_edit',
 			'page_functions_js' => 'functions_personal.js',
-			'personal' => $personal
+			'personal' => $personal,
+			'info' => $info
 		];
 		$this->views->getView($this, 'Avance', $data);
 	}

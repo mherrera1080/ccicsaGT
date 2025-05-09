@@ -198,13 +198,19 @@
                 </div>
             </div>
 
-            <div class="modal-footer">
-                <a class="btn btn-primary btn-lg me-2"
+            <div class="modal-footer justify-content-between">
+
+                <a class="btn btn-primary btn-lg text-white"
                     href="<?= base_url(); ?>/Info/Mostrar/<?= $data['info']['identificacion']; ?>">
-                    <i class="fas fa-edit"></i> Regresar
+                    <i class="fas fa-arrow-left me-2"></i> Regresar
                 </a>
-                <button type="submit" class="btn btn-primary btn-lg me-2">Guardar cambios</button>
+
+                <button type="submit" class="btn btn-success btn-lg text-white">
+                    <i class="fas fa-save me-2"></i> Guardar cambios
+                </button>
+
             </div>
+
         </form>
     </div>
 

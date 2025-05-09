@@ -65,6 +65,7 @@ class InfoModel extends Mysql
     public function MostrarInfo($identificacion)
     {
         $sql = "SELECT
+            e.id_empleado,
             CONCAT(primer_apellido, ' ', segundo_apellido) as apellidos,
             concat(e.nombres, ' ', e.primer_apellido, ' ',e.segundo_apellido) as nombres,
             i.identificacion,

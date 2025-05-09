@@ -175,20 +175,27 @@
                 </div>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-between">
+
+                <button class="btn btn-warning text-black"
+                    onclick="window.location.href='<?= base_url(); ?>/Personal/Avance/<?= $data['info']['id_empleado']; ?>'">
+                    <i class="fas fa-arrow-left me-1"></i> Regresar
+                </button>
 
                 <?php if (!empty($_SESSION['permisos'][2]['editar'])) { ?>
-                    <button class="btn text-black btn-warning"
+                    <button class="btn btn-warning text-black"
                         onclick="window.location.href='<?= base_url(); ?>/Info/Editar/<?= $data['info']['identificacion']; ?>'">
-                        Editar Empleado
+                        <i class="fas fa-edit me-1"></i> Editar Empleado
                     </button>
                 <?php } else { ?>
-                    <button type="button" class="btn text-black btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Editar Empleado
+                    <button type="button" class="btn btn-warning text-black" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <i class="fas fa-lock me-1"></i> Editar Empleado
                     </button>
                 <?php } ?>
 
             </div>
+
         </form>
     </div>
     <?php footerAdmin($data); ?>

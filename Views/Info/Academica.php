@@ -9,6 +9,10 @@
                 <h4>Listado Academica del Empleado || <strong> <?= $data['info']['nombres']; ?> </strong>
                 </h4>
             </div>
+            <button class="btn btn-warning text-black"
+                onclick="window.location.href='<?= base_url(); ?>/Personal/Avance/<?= $data['info']['id_empleado']; ?>'">
+                <i class="fas fa-arrow-left me-1"></i> Regresar
+            </button>
             <div style="height: 25px;"></div>
             <div class="row">
                 <div class="col-lg-12">
@@ -56,7 +60,8 @@
                     <i class="fas fa-exclamation-circle"></i> <!-- Ícono de advertencia -->
                     <span>Acceso Denegado</span>
                 </h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-center"> <!-- Padding vertical y centrado -->
                 <div class="mb-3"> <!-- Margen inferior -->
@@ -96,7 +101,7 @@
                     </div>
                     <div class="col-12">
                         <label for="edit_ubicacion" class="form-label">Documento</label>
-                        <input type="file" class="form-control" id="edit_ubicacion" name="ubicacion" >
+                        <input type="file" class="form-control" id="edit_ubicacion" name="ubicacion">
                     </div>
                 </div>
                 <div class="modal-footer">
