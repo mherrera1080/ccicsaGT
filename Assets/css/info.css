@@ -1,0 +1,67 @@
+/* Sección de información */
+.info-section {
+    background-color: #164166;
+    padding: 10px; /* Aumentar el padding */
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+/* Contenedor de elementos */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Añadir espacio entre los elementos */
+}
+
+/* Elemento del formulario */
+.info-item {
+    flex: 1 1 200px; /* Flexibilidad para adaptarse a tamaños más pequeños */
+    min-width: 200px; /* Asegura un ancho mínimo cómodo */
+    margin-bottom: 15px;
+}
+
+.info-item-per {
+    min-width: 200px; /* Asegura un ancho mínimo cómodo */
+    margin-bottom: 15px;
+}
+
+.info-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-item input,
+.info-item select {
+    display: block;
+    width: 100%; /* Hacer que ocupen todo el ancho disponible */
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .info-item {
+        flex: 1 1 100%; /* Ocupa el ancho completo en pantallas más pequeñas */
+    }
+}
+
+/* Breadcrumb */
+/* .breadcrumb {
+    background-color: #e0f4f5;
+    border-radius: 5px;
+    padding: 10px 15px;
+} */
+
+/* Modal footer */
+.modal-footer {
+    text-align: right; /* Alinear el botón a la derecha */
+}

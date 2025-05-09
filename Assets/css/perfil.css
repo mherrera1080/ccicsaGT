@@ -1,0 +1,82 @@
+.main .profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.main .perfil-img {
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+}
+
+.info-section {
+    background-color: #0e2e50;
+    font-weight: bold;
+}
+
+.modal_header {
+    background-color: #0e2e50;
+    font-weight: bold;
+}
+
+.card-body p {
+    margin-bottom: 8px;
+}
+
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    /* Para suavizar la transición del cambio de estilo */
+}
+
+.profile-img-container:hover .profile-img {
+    filter: brightness(0.7);
+    /* Aplica un sombreado a la imagen */
+}
+
+.overlay-buttons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile-img-container:hover .overlay-buttons {
+    display: block;
+    /* Muestra los botones al poner el cursor encima */
+}
+
+.overlay-buttons .btn {
+    margin: 5px;
+}
+
+.drop-area {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.drop-area:hover {
+    background-color: #f8f9fa;
+}
+
+.drop-area p {
+    margin: 0;
+    font-size: 16px;
+    color: #6c757d;
+}
+
