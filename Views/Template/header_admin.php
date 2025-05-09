@@ -203,7 +203,7 @@
                     <ul id="registros" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
                             <a href="<?= base_url(); ?>/Sistemas/Registros" class="sidebar-link">
-                                <i class="lni lni-target-user"></i>
+                                <i class="lni lni-hierarchy-1"></i>
                                 Actividad Usuarios
                             </a>
                         </li>

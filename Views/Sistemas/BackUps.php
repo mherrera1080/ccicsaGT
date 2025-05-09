@@ -23,7 +23,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="nombre_archivo" class="form-label">Nombre del archivo</label>
-                                <input type="text" class="form-control" id="nombre_archivo" name="nombre_archivo"
+                                <input type="text" class="form-control" style="background-color: lightgray;" id="nombre_archivo" name="nombre_archivo"
                                     value="backup_recursos_db" readonly>
                             </div>
                             <div class="col-md-6">
@@ -34,12 +34,12 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="fecha_creacion" class="form-label">Fecha de creación</label>
-                                <input type="date" class="form-control" id="fecha_creacion" name="fecha_creacion"
+                                <input type="date" class="form-control" style="background-color: lightgray;" id="fecha_creacion" name="fecha_creacion"
                                     value="<?= date('Y-m-d'); ?>" readonly>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <label for="usuario" class="form-label">Usuario</label>
-                                <input type="text" class="form-control" id="usuario" name="usuario"
+                                <input type="text" style="background-color: lightgray;" class="form-control" id="usuario" name="usuario"
                                     value="<?= $data['usuario']['nombre_completo']; ?>" readonly>
                             </div>
                         </div>
