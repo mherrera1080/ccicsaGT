@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-
+//Prueba de Cambios
 // Obtener los datos de configuración desde las constantes definidas en config.php
 $host = DB_HOST;
 $usuario = DB_USER;
