@@ -1,6 +1,8 @@
 <?php
 const BASE_URL = "http://localhost:8080/recursos_humanos/cicsafleet";
 // CAMBIAR URL TAMBIEN PARA RESPALDOS DE DB
+
+
 //Zona horaria
 date_default_timezone_set('America/Guatemala');
 
@@ -36,6 +38,6 @@ const MOVIMIENTOS = 19;
 
 const NOMBRE_EMPESA = "Nacel de CentroAmerica";
 const TIPO_DOCUMENTO = "DPI";
-const NOMBRE_REMITENTE = "SISTEMA DE GESTIÓN DE PERSONAL";
-const NOMBRE_SISTEMA = "SISTEMA DE GESTIÓN DE PERSONAL";
+const NOMBRE_REMITENTE = "SISTEMA DE RH DE PERSONAL";
+const NOMBRE_SISTEMA = "SISTEMA DE RH DE PERSONAL";
 const WEB_EMPRESA = "http://www.carsoca.com";
